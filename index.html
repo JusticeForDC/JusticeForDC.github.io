@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body>
+  <body id="inverted-color-scheme" data-toggler="inverted-color-scheme">
     <div data-sticky-container id="home">
       <nav class="top-bar" role="navigation" data-sticky data-sticky-on="small" data-margin-top="0">
         <h5 class="top-bar-title"><a href="#home">J4DC</a></h5>
@@ -20,6 +20,16 @@
         <div class="top-bar-left">
           <ul class="menu horizontal simple">
             <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <ul class="menu horizontal simple">
+            <li>
+              <a data-toggle="inverted-color-scheme" style="transform: scale(-1, 1)">
+                <span id="light-mode" class="color-scheme-toggle">&nbsp;☼&nbsp;</span>
+                <span id="dark-mode" class="color-scheme-toggle">&nbsp;☾&nbsp;</span>
+              </a>
+            </li>
           </ul>
         </div>
       </nav>

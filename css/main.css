@@ -24,6 +24,27 @@ body {
 	--text3: var(--light-white);
 	--bg3: var(--blackish);
 }
+body.inverted-color-scheme {
+	--text1: var(--light-white);
+	--bg1: var(--dark-gray);
+	
+	--text2: var(--light-white);
+	--bg2: var(--blackish);
+
+	--text3: var(--blackish);
+	--bg3: var(--dark-white);
+}
+
+.color-scheme-toggle {
+	display: none;
+}
+
+/*@media (prefers-color-scheme: light) {
+	body:not(.inverted-color-scheme) #dark-mode,
+	body.inverted-color-scheme #light-mode {
+		display: inline;
+	}
+}*/
 
 @media (prefers-color-scheme: dark) {
 	body {
@@ -35,6 +56,20 @@ body {
 
 		--text3: var(--blackish);
 		--bg3: var(--dark-white);
+	}
+		body.inverted-color-scheme {
+		--text1: var(--blackish);
+		--bg1: var(--light-white);
+		
+		--text2: var(--blackish);
+		--bg2: var(--light-gray);
+
+		--text3: var(--light-white);
+		--bg3: var(--blackish);
+	}
+	body:not(.inverted-color-scheme) #light-mode,
+	body.inverted-color-scheme #dark-mode {
+		display: inline;
 	}
 }
 
