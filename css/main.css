@@ -1,0 +1,176 @@
+/*Custom CSS for the website */
+
+body {
+	--page-gutter: 1em;
+	--border-width: 0px;
+	
+	--light-white: #F6F6F6;
+	--dark-white: #DFDFDF;
+	--light-gray: #E6E6E6;
+	--dark-gray: #494646;
+	--blackish: #292121;
+	
+	--title-font: "Arial Black", Arial, serif;
+	--main-font: Verdana, Arial, sans-serif;
+}
+
+body {
+	--text1: var(--blackish);
+	--bg1: var(--light-white);
+	
+	--text2: var(--blackish);
+	--bg2: var(--light-gray);
+
+	--text3: var(--light-white);
+	--bg3: var(--blackish);
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		--text1: var(--light-white);
+		--bg1: var(--dark-gray);
+		
+		--text2: var(--light-white);
+		--bg2: var(--blackish);
+
+		--text3: var(--blackish);
+		--bg3: var(--dark-white);
+	}
+}
+
+.top-bar {
+	align-items: baseline;
+	background-color: var(--bg2);
+}
+.top-bar .menu {
+	background-color: var(--bg2);
+}
+
+.section-style-1 {
+	color: var(--text1);
+	background-color: var(--bg1);
+}
+.section-style-2 {
+	color: var(--text2);
+	background-color: var(--bg2);
+}
+.section-style-3 {
+	color: var(--text3);
+	background-color: var(--bg3);
+}
+
+.cell.divider {
+  border-left: var(--text3) var(--border-width) solid;
+}
+.section-style-1 .cell.divider {
+  border-left: var(--text1) var(--border-width) solid;
+}
+.section-style-2 .cell.divider {
+  border-left: var(--text2) var(--border-width) solid;
+}
+.section-style-3 .cell.divider {
+  border-left: var(--text3) var(--border-width) solid;
+}
+
+
+body {
+	font-family: var(--main-font);
+	background-color: var(--bg1);
+	color: var(--text1);
+}
+
+h1,h2,h3,h4,h5 {
+	font-family: var(--title-font);
+	font-weight: 400;
+}
+h1 {
+	font-size: 4rem;
+}
+h2 {
+	font-size: 2.4rem;
+}
+h3 {
+	font-size: 2rem;
+}
+h4 {
+	font-size: 1.6rem;
+}
+
+/*links and buttons*/
+a {
+	color: inherit;
+	text-decoration: underline;
+}
+.top-bar a {
+	text-decoration: none;
+}
+a:hover {
+	color: inherit;
+	text-decoration: underline;
+	filter: brightness(180%);
+}
+
+button, 
+a.button {
+	text-decoration: none;
+	color: var(--text3);
+	background-color: var(--bg3);
+	padding: 12px 24px;
+}
+button:hover, 
+button:focus, 
+a.button:hover,
+a.button:focus {
+	color: var(--text3);
+	background-color: var(--bg3);
+	filter: brightness(180%);
+}
+.section-style-3 button, 
+.section-style-3 a.button {
+	text-decoration: none;
+	color: var(--text2);
+	background-color: var(--bg2);
+	padding: 12px 24px;
+}
+.section-style-3 button:hover, 
+.section-style-3 button:focus, 
+.section-style-3 a.button:hover,
+.section-style-3 a.button:focus {
+	color: var(--text2);
+	background-color: var(--bg2);
+	filter: brightness(180%);
+}
+
+img {
+	object-fit: cover;
+}
+
+
+/*gutter and page width*/
+@media (min-width: 40em) {
+	body {
+		--page-gutter: 2em;
+		--border-width: 1px;
+	}
+	.grid-container.full {
+		max-width: 80vw;
+	}
+}
+@media (min-width: 64em) {
+	body {
+		--page-gutter: 4em;
+	}
+	.grid-container.full {
+		max-width: 60vw;
+	}
+}
+.top-bar,
+.grid-container.full > .grid-y > .cell {
+	padding-left: var(--page-gutter);
+	padding-right: var(--page-gutter);
+}
+
+.top-bar {
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
