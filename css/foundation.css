@@ -6640,12 +6640,30 @@ a.thumbnail image {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.top-bar .top-bar-left,
+.top-bar .top-bar-left
 .top-bar .top-bar-right {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
   max-width: 100%;
+}
+
+  .top-bar.unstacked {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .top-bar.unstacked .top-bar-left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    margin-right: auto;
+  }
+  .top-bar.unstacked .top-bar-right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    margin-left: auto;
+  }
 }
 
 @media print, screen and (min-width: 40em) {

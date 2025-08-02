@@ -74,7 +74,6 @@ body.inverted-color-scheme {
 }
 
 .top-bar {
-	align-items: baseline;
 	background-color: var(--bg2);
 }
 .top-bar .menu {
